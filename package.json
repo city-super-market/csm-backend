@@ -1,0 +1,43 @@
+{
+    "name": "csm-backend",
+    "version": "1.0.0",
+    "description": "Backend for city super market application",
+    "main": "server.js",
+    "scripts": {
+        "start": "NODE_ENV=production node dist/server.js",
+        "dev": "npx nodemon",
+        "build": "npx tsc",
+        "prepare": "husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/city-super-market/csm-backend.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/city-super-market/csm-backend/issues"
+    },
+    "homepage": "https://github.com/city-super-market/csm-backend#readme",
+    "engines": {
+        "node": ">=20.0.0",
+        "npm": ">=10.0.0"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^22.5.2",
+        "husky": "^9.1.5",
+        "lint-staged": "^15.2.10",
+        "nodemon": "^3.1.4",
+        "prettier": "3.3.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.4"
+    }
+}
