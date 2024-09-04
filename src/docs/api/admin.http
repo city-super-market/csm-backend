@@ -1,0 +1,15 @@
+@BASE_URL=http://127.0.01:7005/api/v1/admins
+@ADMIN_TOKEN=TEST
+
+@HTTP_VERSION=HTTP/1.1
+
+### Admin Registration
+POST {{BASE_URL}}/register {{HTTP_VERSION}}
+Content-Type: application/json
+Authorization: {{ADMIN_TOKEN}}
+
+{
+    "name": "Adarsh Badagala",
+    "email": "18341A0537@gmrit.edu.in",
+    "allow_password_change": true
+}
