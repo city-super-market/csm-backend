@@ -1,9 +1,10 @@
+import { NextFunction } from 'express';
 import ApiException from '../utils/exceptions/ApiException';
 import { validator } from '../utils';
-import { IRequest, IResponse, INextFunction } from '../interfaces/vendor';
+import { IRequest, IResponse } from '../interfaces/vendor';
 import { IResponseBody } from '../interfaces/vendor/IResponse';
 
-const globalErrorHandler = (error: any, req: IRequest, res: IResponse, next: INextFunction): IResponse => {
+const globalErrorHandler = (error: any, req: IRequest, res: IResponse, next: NextFunction): IResponse => {
     if (!(error instanceof ApiException)) {
         console.error(error);
     }
