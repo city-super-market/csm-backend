@@ -17,6 +17,19 @@
 -   `cp .env.sample .env` and update env variables accordingly
 -   `npm run dev`
 
+## TODO:
+
+-   Configure Logger (winston + morgan)
+-   Configure ESLint
+-   Configure Github Actions (Deploy to EC2)
+-   Configure Swagger
+-   Configure Testing with Jest
+-   Configure Database (MySQL)
+-   Configure Docker
+-   Configure Rate Limiting
+-   Configure Caching
+-   Configure CORS
+
 ## Dev Diary
 
 ### Create project folder
@@ -202,7 +215,7 @@ app.listen(PORT, () => {
 });
 ```
 
-### Final Folder Structure
+### Folder Structure
 
 ```
 Portfolio
@@ -211,6 +224,23 @@ Portfolio
 |\_ dist/
 |\_ node_modules/
 |\_ src/
+    |\_ controllers/
+    |\_ docs/
+        |\_ api/
+        |\_ swagger/
+    |\_ interfaces/
+    |\_ middlewares/
+    |\_ models/
+    |\_ public/
+        |\_ client/
+    |\_ routes/
+        |\_ v1/
+    |\_ services/
+    |\_ utils/
+        |\_ constants/
+        |\_ exceptions/
+        |\_ helpers/
+    |\_ validators/
     |\_ app.ts
     |\_ server.ts
 |\_ .env
